@@ -1,4 +1,5 @@
-﻿using DataStracture.LeetCode;
+﻿using DataStracture.LinkedList;
+using DataStracture.LinkedList.LeetCode;
 
 namespace DataStracture
 {

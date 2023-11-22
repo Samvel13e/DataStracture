@@ -1,4 +1,4 @@
-﻿namespace DataStracture
+﻿namespace DataStracture.LinkedList.LeetCode
 {
     public class ListNode
     {

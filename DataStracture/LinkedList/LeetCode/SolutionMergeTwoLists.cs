@@ -1,10 +1,10 @@
-﻿namespace DataStracture.LeetCode
+﻿namespace DataStracture.LinkedList.LeetCode
 {
     public class SolutionMergeTwoLists
     {
         public ListNode MergeTwoLists(ListNode list1, ListNode list2)
         {
-            ListNode res = new ();
+            ListNode res = new();
             ListNode current = res;
             while (list1 != null && list2 != null)
             {
@@ -29,6 +29,6 @@
                 current.next = list2;
             }
             return res.next;
-       }
+        }
     }
 }

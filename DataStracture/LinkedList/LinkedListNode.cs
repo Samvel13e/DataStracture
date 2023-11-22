@@ -1,4 +1,4 @@
-﻿namespace DataStracture
+﻿namespace DataStracture.LinkedList
 {
     public class LinkedListNode<T>
     {

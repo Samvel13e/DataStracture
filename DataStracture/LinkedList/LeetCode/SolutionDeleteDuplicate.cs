@@ -1,4 +1,4 @@
-﻿namespace DataStracture.LeetCode
+﻿namespace DataStracture.LinkedList.LeetCode
 {
     public class SolutionDeleteDuplicate
     {

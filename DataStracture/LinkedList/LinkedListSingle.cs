@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace DataStracture
+namespace DataStracture.LinkedList
 {
     public class LinkedListSingle<T> : ICollection<T>
     {
@@ -48,7 +48,7 @@ namespace DataStracture
 
         public void CopyTo(T[] array, int arrayIndex)
         {
-            if (arrayIndex < 0 || (array.Length < arrayIndex + Count))
+            if (arrayIndex < 0 || array.Length < arrayIndex + Count)
             {
                 throw new IndexOutOfRangeException();
             }
