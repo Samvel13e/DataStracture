@@ -40,7 +40,13 @@ namespace DataStracture
                 }
             };
             SolutionRemoveNthFromEnd solutionRemoveNthFromEnd = new();
-            solutionRemoveNthFromEnd.RemoveNthFromEnd(list1, 1);
+          var kkkk=  solutionRemoveNthFromEnd.RemoveNthFromEnd(list1, 1);
+            
+            while (kkkk != null)
+            {
+                Console.WriteLine(kkkk.val);
+                kkkk = kkkk.next;
+            }
             return;
             SolutionDeleteDuplicate solutionDeleteDuplicate = new();
             solutionDeleteDuplicate.DeleteDuplicates(list2);
