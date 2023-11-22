@@ -1,10 +1,53 @@
-﻿namespace DataStracture
+﻿using DataStracture.LeetCode;
+
+namespace DataStracture
 {
     public class Program
     {
         public static void Main()
         {
-            LinkedListSingle<int> list = [1,3,4,5,7,8,11];
+            ListNode list1 = new()
+            {
+                val = -1,
+                next = new ListNode
+                {
+                    val = 2
+                }
+            };
+
+
+            ListNode list2 = new()
+            {
+                val = 2,
+                next = new ListNode
+                {
+                    val = 4,
+                    next = new ListNode
+                    {
+                        val = 4,
+                        next = new ListNode
+                        {
+                            val = 4,
+                            next = new ListNode
+                            {
+                                val = 4
+                            ,
+                                next = new ListNode { val = 7 }
+                            }
+                        }
+                    }
+                }
+            };
+            SolutionRemoveNthFromEnd solutionRemoveNthFromEnd = new();
+            solutionRemoveNthFromEnd.RemoveNthFromEnd(list1, 1);
+            return;
+            SolutionDeleteDuplicate solutionDeleteDuplicate = new();
+            solutionDeleteDuplicate.DeleteDuplicates(list2);
+            return;
+            SolutionMergeTwoLists solution = new();
+            var kk = solution.MergeTwoLists(list1, list2);
+            return;
+            LinkedListSingle<int> list = [1, 3, 4, 5, 7, 8, 11];
             Display(list, "List");
             list.Remove(11);
             Display(list, "Remove 11");
