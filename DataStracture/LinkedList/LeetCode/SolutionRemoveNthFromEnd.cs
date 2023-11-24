@@ -23,27 +23,21 @@
             }
 
             ListNode newHead = new();
-            for (int i = 0; i < queue.Count; i++)
+            current = newHead;
+            int i = 0;
+            int queueCount = queue.Count;
+            while (queue.Count > 0)
             {
-                if (i != n)
+                i++;
+                if (queueCount - i + 1 != n)
                 {
-                    newHead.next = new(queue.ElementAt(i));
+                    current.next = new(queue.Dequeue());
+                    current = current.next;
                 }
+                else
+                    queue.Dequeue();
             }
             return newHead.next;
-            //ListNode newHead = new(queue.Dequeue());
-            //current = newHead;
-            //var count = 1;
-            //while (queue.Count > 0)
-            //{
-            //    current.next = new(queue.Dequeue());
-            //    if (count != n)
-            //    {
-            //        current = current.next;
-            //    }
-            //    count++;
-            //}
-            //return newHead;
         }
         //public ListNode RemoveNthFromEnd(ListNode head, int n)
         //{
