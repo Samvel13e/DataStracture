@@ -25,28 +25,31 @@ namespace DataStracture
                     val = 4,
                     next = new ListNode
                     {
-                        val = 4,
+                        val = 14,
                         next = new ListNode
                         {
-                            val = 4,
+                            val = 9,
                             next = new ListNode
                             {
-                                val = 4
+                                val = 46
                             ,
-                                next = new ListNode { val = 7 }
+                                next = new ListNode
+                                {
+                                    val = 7
+                                }
                             }
                         }
                     }
                 }
             };
+
+            SolutionReverseList solutionReverseList = new SolutionReverseList();
+            Display(solutionReverseList.ReverseList(list2));
+            return;
             SolutionRemoveNthFromEnd solutionRemoveNthFromEnd = new();
-          var kkkk=  solutionRemoveNthFromEnd.RemoveNthFromEnd(list1, 1);
-            
-            while (kkkk != null)
-            {
-                Console.WriteLine(kkkk.val);
-                kkkk = kkkk.next;
-            }
+            var kkkk = solutionRemoveNthFromEnd.RemoveNthFromEnd(list2, 2);
+            Display(kkkk);
+
             return;
             SolutionDeleteDuplicate solutionDeleteDuplicate = new();
             solutionDeleteDuplicate.DeleteDuplicates(list2);
@@ -63,6 +66,14 @@ namespace DataStracture
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.WriteLine(arr[i]);
+            }
+        }
+        private static void Display(ListNode node)
+        {
+            while (node != null)
+            {
+                Console.WriteLine(node.val);
+                node = node.next;
             }
         }
         public static void Display(LinkedListSingle<int> list, string test)

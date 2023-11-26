@@ -4,29 +4,38 @@
     {
         public ListNode ReverseList(ListNode head)
         {
-            Stack<int> stack = new();
-            ListNode current = head;
 
-            if (head == null)
+            ListNode resultNode = null;
+            while (head != null)
             {
-                return null;
+                resultNode = new ListNode(head.val, resultNode);
+                head = head.next;
             }
-            while (current != null)
-            {
-                stack.Push(current.val);
-                current = current.next;
-            }
+            return resultNode;
 
-            ListNode newHead = new(stack.Pop());
-            current = newHead;
+            //Stack<int> stack = new();
+            //ListNode current = head;
 
-            while (stack.Count > 0)
-            {
-                current.next = new(stack.Pop());
-                current = current.next;
-            }
+            //if (head == null)
+            //{
+            //    return null;
+            //}
+            //while (current != null)
+            //{
+            //    stack.Push(current.val);
+            //    current = current.next;
+            //}
 
-            return newHead;
+            //ListNode newHead = new(stack.Pop());
+            //current = newHead;
+
+            //while (stack.Count > 0)
+            //{
+            //    current.next = new(stack.Pop());
+            //    current = current.next;
+            //}
+
+            //return newHead;
         }
     }
 }
